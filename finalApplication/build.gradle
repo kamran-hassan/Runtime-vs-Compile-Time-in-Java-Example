@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.companyName'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files('D:\\Runtime Vs CompileTime Dependency\\finalCalulator\\build\\libs\\finalCalulator-1.0-SNAPSHOT.jar')
+    runtimeOnly files('D:\\Runtime Vs CompileTime Dependency\\trignometricCalculator\\build\\libs\\trignometricCalculator-1.0-SNAPSHOT.jar')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
